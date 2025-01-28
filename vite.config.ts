@@ -1,9 +1,11 @@
 import { defineConfig } from 'vite'
-import { svelte } from '@sveltejs/vite-plugin-svelte'
+import { svelte, vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [svelte()],
+  plugins: [svelte({
+    preprocess: vitePreprocess(),
+  })],
   build: {
     target: 'es2023', // Set the target ES version
     minify: true, // Enable minification
