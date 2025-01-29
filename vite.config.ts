@@ -12,7 +12,7 @@ export default defineConfig({
     target: 'es2023', // Set the target ES version
     minify: true, // Enable minification
     rollupOptions: {
-      input: ['src/main.ts'], // Specify the entry point
+      input: ['/index.html','src/main.ts'], // Specify the entry point
     }
   },
   esbuild: {
