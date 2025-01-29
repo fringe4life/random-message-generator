@@ -13,6 +13,9 @@ export default defineConfig({
     minify: true, // Enable minification
     rollupOptions: {
       input: ['/index.html','src/main.ts'], // Specify the entry point
+      output:{
+        inlineDynamicImports: false, // Disable inlining dynamic imports
+      }
     },
     
   },

@@ -6,7 +6,6 @@
   // need to use state to handle random coding messages
   const randomCodingMessages = $state.raw(getRandomCodingMessages());
 
-  $inspect(randomCodingMessages);
 
   
   // need to pass each specific coding message to the card component
