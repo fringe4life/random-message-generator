@@ -15,5 +15,5 @@ export default defineConfig({
       target: 'es2023', // Set the target ES version for esbuild
       drop: ['console', 'debugger'], // Drop console.log and debugger statements
   },
-  assetsInclude: ['index.html','**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.webp', '**/*.avif'], // Include these file types in the assets
+  assetsInclude: ['/index.html','**/*.svelte','**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.webp', '**/*.avif'], // Include these file types in the assets
 })
