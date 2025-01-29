@@ -17,5 +17,5 @@ export default defineConfig({
     target: 'es2023', // Set the target ES version for esbuild
     drop: ['console', 'debugger'], // Drop console.log and debugger statements
   }, // Set the mode to production
-  assetsInclude: ['data.ts', '/public/random.webp'], // Include data.ts in the build output
+  assetsInclude: ['data.ts', '/public/random.webp', '/index.html', 'src/styles.css'], // Include data.ts in the build output
 })
