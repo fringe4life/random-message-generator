@@ -1,3 +1,37 @@
-body {
-	margin: 0;
+@import url(reset.css) layer(reset);
+
+@layer reset, base, layout;
+
+@layer base {
+	header {
+		display: flex;
+		justify-content: space-between;
+
+		img {
+			height: 100px;
+		}
+	}
+}
+
+@layer layout {
+	.main-grid {
+		display: grid;
+		grid-template-columns: [full-width] 0px [content-start] 1fr [content-end] 0px [full-width];
+		gap: 1rem;
+	}
+	.subgrid-columns {
+		display: grid;
+		grid-template-columns: subgrid;
+		gap: 1rem;
+	}
+
+	.main-grid,
+	.subgrid-columns {
+		& > .full-width {
+			grid-column: full-width;
+		}
+		& > .content {
+			grid-column: content;
+		}
+	}
 }
