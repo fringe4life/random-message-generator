@@ -9,7 +9,12 @@ export default defineConfig({
   build: {
     target: 'es2023', // Set the target ES version
     minify: true, // Enable minification
-    
+    rollupOptions: {
+      input: '/index.html',
+      output: {
+        inlineDynamicImports: true,
+      },
+    },
   },
   esbuild: {
       target: 'es2023', // Set the target ES version for esbuild
