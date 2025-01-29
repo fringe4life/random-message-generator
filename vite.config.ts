@@ -10,7 +10,7 @@ export default defineConfig({
     target: 'es2023', // Set the target ES version
     minify: true, // Enable minification
     rollupOptions: {
-      input: ['/index.html','src/main.ts'], // Specify the entry point
+      input: ['/index.html','src/main.ts','src/styles.css'], // Specify the entry point
       output:{
         inlineDynamicImports: false, // Disable inlining dynamic imports
         
@@ -23,5 +23,5 @@ export default defineConfig({
     target: 'es2023', // Set the target ES version for esbuild
     drop: ['console', 'debugger'], // Drop console.log and debugger statements
   }, // Set the mode to production
-  assetsInclude: ['data.ts', '/public/random.webp', '/index.html', 'src/styles.css'], // Include data.ts in the build output
+  assetsInclude: ['data.ts', '/public/random.webp', '/index.html'], // Include data.ts in the build output
 })
