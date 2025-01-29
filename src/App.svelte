@@ -33,6 +33,7 @@
 </script>
 
 <style>
+  /* a grid that automatically generates new columns when possible */
   .autofit-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));

@@ -3,30 +3,41 @@
 @layer reset, base, layout;
 
 @layer base {
+	body {
+		/* layout */
+		max-width: 1600px;
+		margin: 0 auto;
+		padding: 2rem;
+	}
 	header {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 
 		img {
 			height: 100px;
 			object-fit: contain;
 		}
 	}
-	@media (width <= 450px) {
+	@media (width <= 500px) {
 		header {
 			flex-direction: column;
 			justify-content: center;
 			text-align: center;
+
+			line-height: 1.2;
 		}
 	}
 }
 
 @layer layout {
+	/* grid for overall layout */
 	.main-grid {
 		display: grid;
-		grid-template-columns: [full-width] 0px [content-start] 1fr [content-end] 0px [full-width];
+		grid-template-columns: [full-width-start] 0px [content-start] 1fr [content-end] 0px [full-width-end];
 		gap: 1rem;
 	}
+	/* grid to pass columns to children */
 	.subgrid-columns {
 		display: grid;
 		grid-template-columns: subgrid;
