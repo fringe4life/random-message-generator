@@ -15,7 +15,6 @@ export default defineConfig({
         inlineDynamicImports: false, // Disable inlining dynamic imports
         
       },
-      external: ['svelte']
     },
     
   },
