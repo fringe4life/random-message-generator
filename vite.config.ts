@@ -6,14 +6,15 @@ import { svelte, vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 export default defineConfig({
   plugins: [svelte({
     preprocess: vitePreprocess({ script: true }), // Enable TypeScript preprocessing
-
+    exclude: ['node_modules/**', '/src/styles.css', '/src/reset.css'] // Exclude node_modules from preprocessing
   })],
   build: {
     target: 'es2023', // Set the target ES version
     minify: true, // Enable minification
     rollupOptions: {
       input: ['/index.html','src/main.ts'], // Specify the entry point
-    }
+    },
+    
   },
   esbuild: {
     target: 'es2023', // Set the target ES version for esbuild
