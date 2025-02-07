@@ -10,7 +10,7 @@ export default defineConfig({
     target: 'es2023', // Set the target ES version
     minify: true, // Enable minification
     rollupOptions: {
-      input: ['/index.html','src/main.ts','src/styles.css'], // Specify the entry point
+      input: ['/index.html','src/styles.css'], // Specify the entry point
       output:{
         inlineDynamicImports: false, // Disable inlining dynamic imports
         
